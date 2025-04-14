@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155 53" width="155" height="53">
+	<title>signature (1)</title>
+	<defs>
+		<image  width="149" height="49" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJUAAAAxAQMAAADp4Xn0AAAAAXNSR0IB2cksfwAAAAZQTFRFAAAAh46Zbc4q7wAAAAJ0Uk5TAP9bkSK1AAACf0lEQVR4nG3Sb0gTYRzA8d/vbno3Jtwiwih1Z4t8KY0gA92dfxBfRCX0xheWikQRZYbRrGN7XIMWiC1847uSXlTQm4WQC405C9y7RvRigahj0Hwh24Wz899dNy/OOXvePDwfeB54nueLjLLJAlSlYX+gEAUdG78Um4+AbAevv9g0gDkRVKrYdmzDBHD3gAE3+B+TAehNiyn0rGFMft+YCEJNSp9/nD5k3LsO07gwgjt20By9uHcFR1fwsHWGTBPmEKQAgPuD3TR3DMGjbxMmedO8fgRFf6qmJ6JpUsAwX/O+7VgQcvpRPiSmKSxi1i7MaQhMsnabybNev2HaiJcCR9K2bc2XqewqIC451+ONUlC48PxjZ9aamfDISC/WzagNZZQU/c4Bn5ieecDqVj/kdtkopS0F6qmVNOnmkUkK6c9nKunsxWWqhoK41CQiE/HGH929/HUx9J46YWl5tjNrmHT7SjzSIJa7KmBciYjIhWfGhx6LBWtbZ0ldZpggNyg5+7v6EvcHCJsJsbpN6Oapy+RbEkN3RnwycJcSg9Po6HvYnlhtX0kv0ru/turHJntzug2MvVgNvM78XOZTUF3lLFgqW+FMjM5/m1JdYze2TrY296AQy9law8HyybcRH2qpyqeUoNtvKy2P+ptDZ71+LXOMDjTptrFwbu0lIT5KCmi50L1XMrrnVTFQfb3nqtXiCW7TIx3nKXTH1Nr07DWMcUf+2Dbo1oW8RbfCZwIzTBiZkxU7LvFYSOhfPLfeJNm9Jsu3zAA+tU3ZjU7N4SGbWqmt2HNciWHUFermDxpN+vlkiTEQ7QiLJXb85kQvKTGFVYxV0Xl6LpYSw+zRNaPgv+Gs+yKgTSsPAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="2" y="3"/>
+</svg>

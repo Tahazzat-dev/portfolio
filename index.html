@@ -12,8 +12,10 @@
   <body class="flex flex_center">
     <!-- Header area starts -->
     <header class="MT_header">
-      <div class="MT_header-inner MT_flex flex_align_center flex_justify_between">
-        <div class="site-logo">
+      <div
+        class="MT_header-inner MT_flex flex_align_center flex_justify_between"
+      >
+        <div class="MT_site-logo-wrap">
           <a href="/">
             <img
               class="MT_site-logo dark"
@@ -27,28 +29,108 @@
             />
           </a>
         </div>
-        <nav id="MT_nav-horizontal" class="MT_nav MT_flex flex_align_center flex_grow flex_justify_end">
-          <a href="" class="MT_navlink active" ><span>HOME</span><span class="placeholder">HOME</span></a>
-          <a href="" class="MT_navlink" ><span>FEATURES</span><span class="placeholder">FEATURES</span></a>
-          <a href="" class="MT_navlink" ><span>PORTFOLIO</span><span class="placeholder">PORTFOLIO</span></a>
-          <a href="" class="MT_navlink" ><span>RESUME</span><span class="placeholder">RESUME</span></a>
-          <a href="" class="MT_navlink" ><span>TESTIMONIAL</span><span class="placeholder">TESTIMONIAL</span></a>
-        <!-- <a href="" class="MT_navlink" ><span>CLIENTS</span> <span class="placeholder">CLIENTS</span></a> -->
-          <a href="" class="MT_navlink" ><span>BLOG</span> <span class="placeholder">BLOG</span></a>
-          <a href="" class="MT_navlink" ><span>CONTACT</span><span class="placeholder">CONTACT</span></a>
-        </nav>
-        <button class="MT_vertical-nav-toggler MT_flex flex_column">
-                <span></span>
-                <span></span>
-                <span></span>
-        </button>
+
+        <!-- vertical navlinks -->
+        <!-- <nav
+          id="MT_nav-horizontal"
+          class="MT_nav MT_flex flex_align_center flex_grow flex_justify_end"
+        >
+          <a href="" class="MT_navlink"
+            ><span>SKILLS</span><span class="placeholder">SKILLS</span></a
+          >
+          <a href="" class="MT_navlink"
+            ><span>PROJECTS</span><span class="placeholder">PROJECTS</span></a
+          >
+          <a href="" class="MT_navlink"
+            ><span>RESUME</span><span class="placeholder">RESUME</span></a
+          >
+          <a href="" class="MT_navlink"
+            ><span>TESTIMONIAL</span
+            ><span class="placeholder">TESTIMONIAL</span></a
+          >
+          <a href="" class="MT_navlink"
+            ><span>BLOG</span> <span class="placeholder">BLOG</span></a
+          >
+          <a href="" class="MT_navlink"
+            ><span>CONTACT</span><span class="placeholder">CONTACT</span></a
+          >
+        </nav> -->
+        <!-- vertical navlinks -->
+
+        <label
+          class="MT_vertical-nav-toggler visible MT_btn MT_flex flex_column flex_align_center flex_justify_center"
+          for="sidebar-toggler-input"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <input checked type="checkbox" id="sidebar-toggler-input">
+
+         <!-- responsive sidebar -->
+         <aside id="MT_sidebar" class="MT_sidebar">
+           
+          <label for="sidebar-toggler-input" class="sidebar-overlay"></label>
+          <div class="sidebar-inner">
+            <div class="MT_intro-wrap">
+              <img
+                class="MT_site-logo"
+                src="/assets/media/img/profile-photo-passport-size.jpg"
+                alt="Signature dark"
+              />
+              <p class="intro">I build dynamic web apps with the MERN stack and custom WordPress themes tailored for performance and usability. Open to work and ready to take on new challenges.</p>
+            </div>
+  
+            <nav
+              id="MT_nav-vertical"
+              class="MT_nav MT_flex flex_column flex_grow"
+            >
+              <a href="" class="MT_navlink"
+                ><span>SKILLS</span><span class="placeholder">SKILLS</span></a
+              >
+              <a href="" class="MT_navlink"
+                ><span>PROJECTS</span><span class="placeholder">PROJECTS</span></a
+              >
+              <a href="" class="MT_navlink"
+                ><span>RESUME</span><span class="placeholder">RESUME</span></a
+              >
+              <a href="" class="MT_navlink"
+                ><span>TESTIMONIAL</span
+                ><span class="placeholder">TESTIMONIAL</span></a
+              >
+              <a href="" class="MT_navlink"
+                ><span>BLOG</span> <span class="placeholder">BLOG</span></a
+              >
+              <a href="" class="MT_navlink"
+                ><span>CONTACT</span><span class="placeholder">CONTACT</span></a
+              >
+            </nav>
+  
+            <div class="MT_social-links">
+              <p>CONNECT WITH ME</p>
+              <div>
+                <a href="#">f</a>
+                <a href="#">T</a>
+                <a href="#">L</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <!-- responsive sidebar -->
       </div>
     </header>
     <!-- Header area ends -->
     <!-- main area starts -->
-    <main class="MT_main"></main>
+    <main class="MT_main MT_container">
+      <div class="test-wrapper">
+        <button class="MT_btn">button</button>
+        <div class="MT_card"></div>
+      </div>
+    </main>
     <!-- main area ends -->
     <!-- footer area starts -->
+
     <footer></footer>
     <!-- footer area ends -->
 

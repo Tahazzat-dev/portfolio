@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tahazzat</title>
+    <link rel="icon" type="image/x-icon" href="./assets/media/icon/favicon.ico">
+
+    <title>Tahazzat's Portfolio</title>
+
+    <!-- font awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/7a263e28c3.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="/assets/css/theme.css" />
@@ -31,7 +39,7 @@
         </div>
 
         <!-- vertical navlinks -->
-        <!-- <nav
+        <nav
           id="MT_nav-horizontal"
           class="MT_nav MT_flex flex_align_center flex_grow flex_justify_end"
         >
@@ -54,7 +62,7 @@
           <a href="" class="MT_navlink"
             ><span>CONTACT</span><span class="placeholder">CONTACT</span></a
           >
-        </nav> -->
+        </nav>
         <!-- vertical navlinks -->
 
         <label
@@ -66,22 +74,34 @@
           <span></span>
         </label>
 
-        <input checked type="checkbox" id="sidebar-toggler-input">
+        <input checked type="checkbox" id="sidebar-toggler-input" />
 
-         <!-- responsive sidebar -->
-         <aside id="MT_sidebar" class="MT_sidebar">
-           
+        <!-- responsive sidebar -->
+        <aside id="MT_sidebar" class="MT_sidebar">
           <label for="sidebar-toggler-input" class="sidebar-overlay"></label>
           <div class="sidebar-inner">
             <div class="MT_intro-wrap">
-              <img
-                class="MT_site-logo"
-                src="/assets/media/img/profile-photo-passport-size.jpg"
-                alt="Signature dark"
-              />
-              <p class="intro">I build dynamic web apps with the MERN stack and custom WordPress themes tailored for performance and usability. Open to work and ready to take on new challenges.</p>
+              <div class="logo-wrap MT_flex flex_justify_between">
+                <div class="site-logo-wrap flex_grow">
+                  <img
+                    class="MT_site-logo"
+                    src="/assets/media/img/profile-photo-passport-size.jpg"
+                    alt="Signature dark"
+                  />
+                </div>
+                <label
+                  class="MT_flex flex_align_center flex_justify_center MT_btn sidebar-toggler-close"
+                  for="sidebar-toggler-input"
+                  ><i class="fa-solid fa-xmark sidebar-close-icon"></i
+                ></label>
+              </div>
+              <p class="intro">
+                I build dynamic web apps with the MERN stack and custom
+                WordPress themes tailored for performance and usability. Open to
+                work and ready to take on new challenges.
+              </p>
             </div>
-  
+
             <nav
               id="MT_nav-vertical"
               class="MT_nav MT_flex flex_column flex_grow"
@@ -90,7 +110,8 @@
                 ><span>SKILLS</span><span class="placeholder">SKILLS</span></a
               >
               <a href="" class="MT_navlink"
-                ><span>PROJECTS</span><span class="placeholder">PROJECTS</span></a
+                ><span>PROJECTS</span
+                ><span class="placeholder">PROJECTS</span></a
               >
               <a href="" class="MT_navlink"
                 ><span>RESUME</span><span class="placeholder">RESUME</span></a
@@ -106,13 +127,18 @@
                 ><span>CONTACT</span><span class="placeholder">CONTACT</span></a
               >
             </nav>
-  
+
             <div class="MT_social-links">
               <p>CONNECT WITH ME</p>
-              <div>
-                <a href="#">f</a>
-                <a href="#">T</a>
-                <a href="#">L</a>
+              <div class="MT_flex flex_aign_center flex_justify_center">
+                <a class="" href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a class="" href="#"
+                  ><i class="fa-brands fa-square-x-twitter"></i
+                ></a>
+                <a class="" href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a class="" href="#"
+                  ><i class="fa-brands fa-square-upwork"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -124,7 +150,10 @@
     <!-- main area starts -->
     <main class="MT_main MT_container">
       <div class="test-wrapper">
-        <button class="MT_btn">button</button>
+        <div class="MT_btn-wrapper">
+          <button class="MT_gradient-btn">button</button>
+          <div class="MT_gradient-border-bg"></div>
+        </div>
         <div class="MT_card"></div>
       </div>
     </main>

@@ -65,17 +65,15 @@ ol {
   --clr-white-700: #D1D9E6;
   --clr-white-900: #ffffff;
 
-  /* --clr-gray-400:#262a2e;
-  --clr-gray-400:#1c1e22; */
-
+  /* ======= text color ======== */
   --clr-body: #878e99;
   --clr-body-white: #3c3e41;
 
-  /* background color */
+  /* ======= background-color ======== */
   --bg-clr-body-black: #212428;
   --bg-clr-body-white: #ecf0f3;
 
-  /* gradient color */
+  /* ======= background-color gradient ======== */
   --gradient-bg-black: linear-gradient(
     145deg,
     var(--clr-dark-700),
@@ -93,7 +91,7 @@ ol {
   );
   --gradient-bg-white-reverse: linear-gradient(145deg, var(--clr-white-400) ,  var(--clr-white-400));
 
-  /* shadow */
+ /* ======= box-shadow ======== */
   --shadow-gray-600: 10px 10px 19px var(--clr-dark-900),
     -10px -10px 19px var(--clr-dark-200);
   --shadow-gray-reverse-600: 10px 10px 10px var(--clr-dark-700),
@@ -104,92 +102,26 @@ ol {
   --shadow-gray-reverse-200: 5px 5px 15px var(--clr-white-700),
   -5px -5px 15px var(--clr-white-900);
 
-  /* transition */
+  /* ======= transition ======== */
   --transition-slow: 0.4s;
   --transition-medium: 0.3s;
   --transition-fast: 0.2s;
 
-  /* --clr-secondary: #f4f5f6;
-  --clr-tertiary: #0d1013;
-  --clr-dark: #1a1d23;
-  --clr-darker: #1e1f21;
-  --clr-gray: #f6f6f6;
-  --clr-subtitle: #f9004d;
-  --clr-border-white: #dadada;
-  --clr-primary-gradient-from: #6a67ce;
-  --clr-primary-gradient-to: #fc636b;
-  --shadow: 0 3px 4px rgba(0, 0, 0, 1), inset 0 -2px 5px rgba(0, 0, 0, 1),
-  inset 0 2px 2px rgba(255, 255, 255, 0.5), 0 0 0 2px #000, 0 0 0 5px #0c0c0c,
-  0 0 0 5.5px #080808;
-  --shadow-1: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
-  --shadow-light-1: 10px 10px 19px rgba(0, 0, 0, 0.1);
-  --shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
-  --inner-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset,
-    -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
-  --inner-shadow-white: 1px 4px 2px -3px #d1d9e6 inset,
-    -1px -3px 3px -2px #ffffff inset;
-  --shadow-white-3: 5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff;
-  --gradient-box-w: linear-gradient(145deg, #e2e8ec, #ffffff);;
-  --gradient-red-hover: linear-gradient(
-    145deg,
-    var(--clr-primary-gradient-from),
-    var(--clr-primary-gradient-to)
-  );
-  --clr-heading: #c4cfde;
-  --clr-heading-wv: #1e2125;
 
-  --clr-lightn: #c4cfde;
-  --clr-midgray: #878787;
-  --clr-light: #e4e6ea;
-  --clr-lighter: #ced0d4;
-  --clr-lightest: #f0f2f5;
-  --clr-border: hsla(0, 0%, 100%, 0.2);
-  --clr-white: #ffffff;
-  --clr-black: #0000;
-  --clr-white-75: rgba(255, 255, 255, 0.75);
-  --clr-success: #3eb75e;
-  --clr-danger: #ff0003;
-  --clr-warning: #ff8f3c;
-  --clr-info: #1ba2db;
-  --clr-border-white: #dce1e4;
-  --clr-facebook: #3b5997;
-  --clr-twitter: #1ba1f2;
-  --clr-youtube: #ed4141;
-  --clr-linkedin: #0077b5;
-  --clr-pinterest: #e60022;
-  --clr-instagram: #c231a1;
-  --clr-vimeo: #00adef;
-  --clr-twitch: #6441a3;
-  --clr-discord: #7289da;
-  --clr-separator: #878e9982;
+  /* ======= font-weight ======== */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+  --fw-black: 900;
 
-  --bg-clr-1: linear-gradient(145deg, #1e2024, #23272b);
-  --bg-clr-2: #212428; */
-
-  --p-light: 300;
-  --p-regular: 400;
-  --p-medium: 500;
-  --p-semi-bold: 600;
-  --p-bold: 700;
-  --p-extra-bold: 800;
-  --p-black: 900;
-  --s-light: 300;
-  --s-regular: 400;
-  --s-medium: 500;
-  --s-semi-bold: 600;
-  --s-bold: 700;
-  --s-extra-bold: 800;
-  --s-black: 900;
-  --transition: 0.4s;
-
+  /* ======= font-family ======== */
   --ff-primary: "Poppins", sans-serif;
   --ff-secondary: "Montserrat", sans-serif;
 
-  --font-size-b1: 18px;
-  --font-size-b2: 22px;
-  --font-size-b3: 14px;
-
-  /* ======= line height ======== */
+  /* ======= line-height ======== */
   --lh-normal: normal;
   --lh-b1: 1.9;
   --lh-b2: 1.6;
@@ -481,6 +413,10 @@ ol {
   font-weight: bold;
 }
 
+.relative {
+  position: relative;
+}
+
 /*======= font sizes ======== */
 .MT_fs-xxs {
   font-size: var(--fs-xxs);
@@ -542,7 +478,7 @@ ol {
   line-height: var(--lh-normal);
 }
 
-/* Button Styles */
+/* ======= button style ====== */
 .MT_btn {
   width: 100px;
   height: 100px;
@@ -574,6 +510,76 @@ ol {
 }
 
 
+/* ======= gradient button ====== */
+
+.MT_btn-wrapper {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+
+.MT_gradient-btn {
+  display: block;
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  padding: 12px 20px;
+  color: var(--clr-body);
+  background: var(--gradient-bg-black);
+	border-radius: 50px;
+  border: 0px;
+  cursor: pointer;
+}
+
+.light .MT_gradient-btn {
+  color: var(--clr-body-white);
+  background: var(--gradient-bg-white);
+}
+
+.MT_gradient-border-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(90deg, #FF8038 0%, #FF0099 30.43%, #00EBEB 68.23%, #DB00FF 100%);
+  background-size: 600% 600%;
+  border-radius: 50px;
+  animation: MTAnimateGradientBorder 4s ease infinite;
+  -webkit-animation: MTAnimateGradientBorder 4s ease infinite;
+  -moz-animation: MTAnimateGradientBorder 4s ease infinite;
+  z-index: -1;
+  transform: translate(-2px, -2px);
+  transition: filter 1s ease-in;
+}
+
+.MT_btn-wrapper:hover .MT_gradient-border-bg {
+  /* width: calc(100% + 4px); */
+  width: 100%;
+  /* height: calc(100% + 4px); */
+  height: 100%;
+}
+
+
+@-webkit-keyframes MTAnimateGradientBorder {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes MTAnimateGradientBorder {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes MTAnimateGradientBorder {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+
+/* ======= card border and shadow ====== */
 .MT_card{
   transition: all var(--transition-slow);
   background: var(--gradient-bg-black);

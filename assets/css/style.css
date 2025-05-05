@@ -72,6 +72,15 @@
   text-transform: uppercase;
 }
 
+.MT_section-title{
+  text-align: center;
+}
+
+.MT_section-subtitle{
+  /* margin-top: var(--spacing-xxs); */
+  text-align: center;
+}
+
 /* =========== main style starts =========*/
 body {
   color: var(--clr-body);
@@ -231,6 +240,7 @@ body.light {
 .MT_banner {
   position: relative;
   padding-top: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
 }
 
 .MT_banner .MT_info-container {
@@ -301,6 +311,58 @@ body.light {
   border-radius: 20px;
   overflow: hidden;
 }
+
+
+/* ======== skills section ========= */
+.MT_section.skills-wrapper{
+  padding-top: var(--spacing-xl);
+}
+
+.MT_section.skills-inner{
+
+}
+
+
+/* ======= progress bar ===== */
+.skills-wrapper .skills_container{
+  flex-wrap: wrap;
+  gap: var(--spacing-xxs);
+}
+
+.skills-wrapper .MT_section-title{
+  margin-bottom: 15px;
+}
+
+.MT_progress-animation {
+  width: 45%;
+}
+
+.MT_progress-header {
+  margin-bottom: 0.25rem;
+  font-size: var(--fs-base);
+  /* color: var(--clr-primary); */
+}
+
+.MT_progress-bar {
+  background: var(--clr-dark-50);
+  height: 14px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-gray-600);
+}
+
+.MT_progress-fill {
+  background: var(--clr-body);
+  height: 100%;
+  width: 0%;
+  transition: width 1.5s ease-in-out;
+}
+
+.MT_section-subtitle{
+  margin-bottom: var(--spacing-sm);
+}
+
+
 
 /* ================= 
       Device responsiveness
@@ -582,5 +644,4 @@ body.light {
 
 footer {
   padding-top: 100px;
-  background-color: gray;
 }

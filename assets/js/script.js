@@ -68,7 +68,8 @@ class TextScramble {
             let intermediateCode = fromCode;
             const animationDurationFrames = 60; // Adjust for the duration of the stepping
             if (this.frame - start < animationDurationFrames) {
-              intermediateCode += direction * Math.ceil((this.frame - start) * step * 0.2); // Adjust multiplier for finer control
+              intermediateCode +=
+                direction * Math.ceil((this.frame - start) * step * 0.2); // Adjust multiplier for finer control
             } else {
               intermediateCode = toCode; // Go directly to the target after the duration
             }
@@ -97,11 +98,46 @@ class TextScramble {
   }
 }
 
+class ProgressAnimation {
+  constructor(selector = ".MT_progress-animation") {
+    this.$elements = $(selector);
+    this.init();
+  }
+
+  init() {
+    this.$elements.each((_, el) => {
+      this.animateProgress($(el));
+    });
+  }
+
+  animateProgress($el) {
+    const value = parseInt($el.data("value"), 10);
+    const name = $el.data("name");
+    const $fill = $el.find(".MT_progress-fill");
+    const $label = $el.find(".MT_progress-name");
+    const $counter = $el.find(".MT_progress-value");
+
+    $label.text(name);
+    $fill.css("width", `${value}%`);
+
+    let current = 0;
+    const duration = 1500;
+    const intervalTime = duration / value;
+
+    const interval = setInterval(() => {
+      current++;
+      $counter.text(`${current}%`);
+      if (current >= value) clearInterval(interval);
+    }, intervalTime);
+  }
+}
+
 // jQuery shorthand on document ready
 $(function () {
   const $el = $(".MT_skill_anim_container");
   const phrases = $(".MT_skill_anim_texts").text().split(",");
-  const randomizeChar =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-  new TextScramble($el, phrases, randomizeChar, 2000);
+  const randomizeChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  new TextScramble($el, phrases, randomizeChar, 4000);
+
+  new ProgressAnimation();
 });

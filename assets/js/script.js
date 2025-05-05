@@ -1,9 +1,9 @@
 class TextScramble {
-  constructor($el, phrases = [], interval = 800) {
+  constructor($el, phrases = [], initialRandomizeChar, interval = 800) {
     this.$el = $el;
     this.phrases = phrases;
     this.interval = interval;
-    this.chars = "!<>-_\\/[]{}—=+*^?#________";
+    this.chars = initialRandomizeChar;
     this.frame = 0;
     this.queue = [];
     this.counter = 0;
@@ -54,11 +54,11 @@ class TextScramble {
         complete++;
         output += to;
       } else if (this.frame >= start) {
-        if (!char || Math.random() < 0.28) {
+        if (!char || Math.random() < 0.01) {
           char = this.randomChar();
           this.queue[i].char = char;
         }
-        output += `<span class="dud">${char}</span>`;
+        output += `<span class="MT_txt_anim">${char}</span>`;
       } else {
         output += from;
       }
@@ -83,5 +83,9 @@ class TextScramble {
 $(function () {
   const $el = $(".MT_skill_anim_container");
   const phrases = $(".MT_skill_anim_texts").text().split(",");
-  new TextScramble($el, phrases, 2000);
+//   const randomizeChar =
+//     "01ZXCVBNMASDFGHJKLQWERTYUIOP!@#$%^&*()_+-={}[]|:;'<>,.?/~`";
+  const randomizeChar =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  new TextScramble($el, phrases, randomizeChar, 2000);
 });

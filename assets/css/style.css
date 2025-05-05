@@ -243,17 +243,12 @@ body.light {
 }
 .MT_info-container h2{
   gap: 25px;
+  min-height: 85px;
 }
 
-.MT_info-container h2 .skill_el{
-  white-space: nowrap;
-}
 
 .MT_info-container .name{
   color: var(--clr-primary);
-}
-.MT_info-container p{
-  margin-top: 20px;
 }
 
 /* ==== skill text animation ====== */
@@ -267,6 +262,16 @@ body.light {
   visibility: hidden;
 }
 
+.MT_txt_anim{
+  opacity: 0.9;
+  font-family: var(--ff-primary);
+  animation: flicker 0.2s infinite alternate;
+}
+
+@keyframes flicker {
+  from { opacity: 0.8; }
+  to { opacity: 0.9; }
+}
 /* ====== banner profile ===== */
 .MT_profile-container .MT_profile-card{
   border-radius: 20px;

@@ -127,11 +127,14 @@ ol {
   --lh-b2: 1.6;
   --lh-b3: 1.7;
 
+  --spacing-xxs: 25px;
   --spacing-xs: 40px;
   --spacing-sm: 60px;
   --spacing-md: 80px;
   --spacing-lg: 100px;
   --spacing-xl: 120px;
+
+  --radius:12px;
 
   --transition-fast: 0.2s;
   --transition-normal: 0.3s;
@@ -169,6 +172,7 @@ ol {
     --fs-5xl: 43px;
     --fs-6xl: 53px;
 
+    --spacing-xxs: 22px;
     --spacing-xs: 37.86px;
     --spacing-sm: 56.43px;
     --spacing-md: 75px;
@@ -190,6 +194,9 @@ ol {
     --fs-5xl: 41.16px;
     --fs-6xl: 51px;
 
+    --radius:10px;
+
+    --spacing-xxs: 20px;
     --spacing-xs: 35.72px;
     --spacing-sm: 52.86px;
     --spacing-md: 70px;
@@ -232,6 +239,8 @@ ol {
     --fs-5xl: 39.32px;
     --fs-6xl: 47px;
 
+    --radius:8px;
+
     --spacing-xs: 31.44px;
     --spacing-sm: 45.72px;
     --spacing-md: 60px;
@@ -253,6 +262,9 @@ ol {
     --fs-5xl: 37.9px;
     --fs-6xl: 44.5px;
 
+    --radius:6px;
+
+    --spacing-xxs: 20px;
     --spacing-xs: 29.3px;
     --spacing-sm: 42.15px;
     --spacing-md: 55px;
@@ -480,12 +492,11 @@ ol {
 
 /* ======= button style ====== */
 .MT_btn {
-  width: 100px;
-  height: 100px;
   transition: all var(--transition-slow);
   background: var(--gradient-bg-black);
   box-shadow: var(--shadow-gray-600);
   color: var(--clr-body);
+  border-radius: var(--radius);
 }
 
 .MT_btn:hover {
@@ -553,11 +564,8 @@ ol {
   transition: filter 1s ease-in;
 }
 
-.MT_btn-wrapper:hover .MT_gradient-border-bg {
-  /* width: calc(100% + 4px); */
-  width: 100%;
-  /* height: calc(100% + 4px); */
-  height: 100%;
+.MT_btn-wrapper:hover .MT_gradient-btn {
+  /* color: var(--clr-primary); */
 }
 
 

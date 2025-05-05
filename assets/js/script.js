@@ -39,11 +39,11 @@ class TextScramble {
 
     cancelAnimationFrame(this.frameRequest);
     this.frame = 0;
-    this.update();
+    this.update(oldText); // Pass the old text to the update function
     return promise;
   }
 
-  update() {
+  update(oldText) {
     let output = "";
     let complete = 0;
 
@@ -54,11 +54,29 @@ class TextScramble {
         complete++;
         output += to;
       } else if (this.frame >= start) {
-        if (!char || Math.random() < 0.01) {
-          char = this.randomChar();
-          this.queue[i].char = char;
+        if (from === to) {
+          output += to; // If characters are the same, no animation needed
+          complete++;
+        } else {
+          const fromCode = from.charCodeAt(0);
+          const toCode = to.charCodeAt(0);
+
+          if (!char) {
+            const diff = Math.abs(toCode - fromCode);
+            const step = Math.ceil(diff / 30); // Slower animation (adjust divisor for speed)
+            const direction = toCode > fromCode ? 1 : -1;
+            let intermediateCode = fromCode;
+            const animationDurationFrames = 60; // Adjust for the duration of the stepping
+            if (this.frame - start < animationDurationFrames) {
+              intermediateCode += direction * Math.ceil((this.frame - start) * step * 0.2); // Adjust multiplier for finer control
+            } else {
+              intermediateCode = toCode; // Go directly to the target after the duration
+            }
+            char = String.fromCharCode(Math.round(intermediateCode));
+            this.queue[i].char = char;
+          }
+          output += `<span class="MT_txt_anim">${char}</span>`;
         }
-        output += `<span class="MT_txt_anim">${char}</span>`;
       } else {
         output += from;
       }
@@ -69,7 +87,7 @@ class TextScramble {
     if (complete === this.queue.length) {
       this.resolve();
     } else {
-      this.frameRequest = requestAnimationFrame(this.update);
+      this.frameRequest = requestAnimationFrame(() => this.update(oldText)); // Keep passing oldText
       this.frame++;
     }
   }
@@ -83,8 +101,6 @@ class TextScramble {
 $(function () {
   const $el = $(".MT_skill_anim_container");
   const phrases = $(".MT_skill_anim_texts").text().split(",");
-//   const randomizeChar =
-//     "01ZXCVBNMASDFGHJKLQWERTYUIOP!@#$%^&*()_+-={}[]|:;'<>,.?/~`";
   const randomizeChar =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   new TextScramble($el, phrases, randomizeChar, 2000);

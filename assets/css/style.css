@@ -226,33 +226,28 @@ body.light {
   transform: translateX(0);
 }
 
-
 /* ========= banner ========== */
 .MT_banner {
- position: relative;
- padding-top: var(--spacing-lg);
- max-width: 1250px; 
+  position: relative;
+  padding-top: var(--spacing-lg);
+  max-width: 1250px;
 }
 
-.MT_banner .MT_info-container{
+.MT_banner .MT_info-container {
   max-width: 700px;
+  padding: var(--spacing-xs) 0;
 }
 
-.MT_info-container h4{
+.MT_info-container h4 {
   margin-bottom: 20px;
 }
-.MT_info-container h2{
+.MT_info-container h2 {
   gap: 25px;
   min-height: 85px;
 }
 
-
-.MT_info-container .name{
-  color: var(--clr-primary);
-}
-
 /* ==== skill text animation ====== */
-.MT_skill_anim_texts{
+.MT_skill_anim_texts {
   position: absolute;
   top: 0;
   left: 0;
@@ -261,23 +256,48 @@ body.light {
   pointer-events: none;
   visibility: hidden;
 }
+.MT_skill_anim_container {
+  color: var(--clr-primary);
+}
 
-.MT_txt_anim{
+.MT_txt_anim {
   opacity: 0.9;
   font-family: var(--ff-primary);
   animation: flicker 0.2s infinite alternate;
 }
 
 @keyframes flicker {
-  from { opacity: 0.8; }
-  to { opacity: 0.9; }
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 0.9;
+  }
 }
+.MT_banner-social-links p {
+  margin-bottom: 15px;
+}
+.MT_banner-social-links .social_btn {
+  gap: 25px;
+}
+
+.MT_gradient-btn.download_btn span {
+  margin-left: 5px;
+}
+
+.MT_banner-social-links .MT_btn {
+  width: var(--spacing-sm);
+  height: var(--spacing-sm);
+  font-size: var(--fs-lg);
+}
+.MT_banner-social-links .MT_btn {
+}
+
 /* ====== banner profile ===== */
-.MT_profile-container .MT_profile-card{
+.MT_profile-container .MT_profile-card {
   border-radius: 20px;
   overflow: hidden;
 }
-
 
 /* ================= 
       Device responsiveness
@@ -298,12 +318,11 @@ body.light {
 /* tablets ( extra large )  */
 @media screen and (max-width: 1023px) {
   .MT_vertical-nav-toggler {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
 
   #MT_nav-horizontal {
     display: none;
@@ -380,17 +399,15 @@ body.light {
   }
 
   #MT_sidebar .site-logo-wrap {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
   }
-  
+
   #MT_sidebar .sidebar-toggler-close {
     position: absolute;
     right: 0;
   }
 
-
-
-  #MT_sidebar .intro{
+  #MT_sidebar .intro {
     text-align: center;
   }
 
@@ -445,4 +462,8 @@ body.light {
     min-width: 200px;
     padding: 16px;
   }
+}
+
+footer {
+  margin-top: 100px;
 }

@@ -65,6 +65,12 @@
 .MT_gap-xs-top {
   padding-top: var(--spacing-xs);
 }
+.capitalize {
+  text-transform: capitalize;
+}
+.uppercase {
+  text-transform: uppercase;
+}
 
 /* =========== main style starts =========*/
 body {
@@ -119,7 +125,7 @@ body.light {
   box-shadow: 10px 10px 19px rgba(0, 0, 0, 0.1);
 }
 
-/* header logo */
+/* ========= header logo ======= */
 .MT_site-logo-wrap {
   padding: 7px 0;
 }
@@ -143,7 +149,7 @@ body.light {
   display: none;
 }
 
-/* navbar */
+/* ======= navbar ====== */
 .MT_nav {
   gap: 4%;
 }
@@ -176,7 +182,7 @@ body.light {
   max-width: 100%;
 }
 
-/* hamberger menu btn */
+/* ===== hamberger menu ======= */
 .MT_vertical-nav-toggler {
   gap: 2.5px;
   width: 50px;
@@ -211,7 +217,7 @@ body.light {
   display: none;
 }
 
-/* sidebar */
+/* ======= sidebar ======== */
 .MT_sidebar {
   display: none;
 }
@@ -219,6 +225,54 @@ body.light {
 #sidebar-toggler-input:checked ~ .MT_sidebar {
   transform: translateX(0);
 }
+
+
+/* ========= banner ========== */
+.MT_banner {
+ position: relative;
+ padding-top: var(--spacing-lg);
+ max-width: 1250px; 
+}
+
+.MT_banner .MT_info-container{
+  max-width: 700px;
+}
+
+.MT_info-container h4{
+  margin-bottom: 20px;
+}
+.MT_info-container h2{
+  gap: 25px;
+}
+
+.MT_info-container h2 .skill_el{
+  white-space: nowrap;
+}
+
+.MT_info-container .name{
+  color: var(--clr-primary);
+}
+.MT_info-container p{
+  margin-top: 20px;
+}
+
+/* ==== skill text animation ====== */
+.MT_skill_anim_texts{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* ====== banner profile ===== */
+.MT_profile-container .MT_profile-card{
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 
 /* ================= 
       Device responsiveness

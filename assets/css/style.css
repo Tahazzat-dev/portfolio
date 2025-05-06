@@ -81,6 +81,10 @@
   text-align: center;
 }
 
+.primary_text{
+  color: var(--clr-primary);
+}
+
 /* =========== main style starts =========*/
 body {
   color: var(--clr-body);
@@ -91,6 +95,7 @@ body {
   font-family: var(--ff-primary);
   width: 100%;
   height: 100%;
+  font-weight: 400;
   line-height: normal;
 }
 body.light {
@@ -240,7 +245,7 @@ body.light {
 .MT_banner {
   position: relative;
   padding-top: var(--spacing-md);
-  padding-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-xs);
 }
 
 .MT_banner .MT_info-container {
@@ -313,15 +318,22 @@ body.light {
 }
 
 
+/* ======= about me section ======= */
+.MT_about-me-wrapper{
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xxs);
+}
+
+
 /* ======== skills section ========= */
 .MT_section.skills-wrapper{
   padding-top: var(--spacing-xl);
 }
 
-.MT_section.skills-inner{
-
+.skills_subtitle{
+  max-width: 700px;
+  margin: 0 auto;
 }
-
 
 /* ======= progress bar ===== */
 .skills-wrapper .skills_container{
@@ -351,6 +363,12 @@ body.light {
   box-shadow: var(--shadow-gray-600);
 }
 
+.light .MT_progress-bar {
+  background: var(--bg-clr-body-white);
+  box-shadow: var(--shadow-gray-200);
+  border: 1px solid var(--clr-white-400);
+}
+
 .MT_progress-fill {
   background: var(--clr-body);
   height: 100%;
@@ -360,6 +378,7 @@ body.light {
 
 .MT_section-subtitle{
   margin-bottom: var(--spacing-sm);
+  font-weight: 400;
 }
 
 
@@ -582,6 +601,12 @@ body.light {
     max-width: 350px;
     margin: 0 auto;
    }
+
+
+   /* ====== skills section ====== */
+   .MT_progress-animation {
+    width: 100%;
+  }
 
 
 }

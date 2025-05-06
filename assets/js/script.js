@@ -97,18 +97,29 @@ class TextScramble {
     return this.chars[Math.floor(Math.random() * this.chars.length)];
   }
 }
-
 class ProgressAnimation {
   constructor(selector = ".MT_progress-animation") {
     this.$elements = $(selector);
+    this.observer = new IntersectionObserver(this.handleIntersection, { threshold: 0.5 }); // Adjust threshold as needed
     this.init();
   }
 
   init() {
     this.$elements.each((_, el) => {
-      this.animateProgress($(el));
+      this.observer.observe(el);
+      $(el).data('animated', false); // Mark as not yet animated
     });
   }
+
+  handleIntersection = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !$(entry.target).data('animated')) {
+        this.animateProgress($(entry.target));
+        $(entry.target).data('animated', true); 
+        observer.unobserve(entry.target);
+      }
+    });
+  };
 
   animateProgress($el) {
     const value = parseInt($el.data("value"), 10);
@@ -119,6 +130,7 @@ class ProgressAnimation {
 
     $label.text(name);
     $fill.css("width", `${value}%`);
+    $counter.text(`0%`); // Reset counter if re-animated
 
     let current = 0;
     const duration = 1500;

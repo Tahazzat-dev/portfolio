@@ -381,6 +381,29 @@ body.light {
   font-weight: 400;
 }
 
+/* ======== what i do ======= */
+.home_skills_container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xs);
+}
+
+.home_skills_container .MT_card{
+  padding: var(--spacing-xxs);
+  border-radius: var(--radius);
+  width: 100%;
+}
+.home_skills_container img{
+  margin-bottom: var(--spacing-xxs);
+}
+
+.home_skills_container p{
+  margin-top: 10px;
+}
+
+
+
+
 
 
 /* ================= 

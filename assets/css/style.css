@@ -393,15 +393,17 @@ body.light {
   border-radius: var(--radius);
   width: 100%;
 }
-.home_skills_container img{
-  margin-bottom: var(--spacing-xxs);
+
+.home_skills_container .MT_card img{
+  margin: 0 auto;
+  margin-bottom: var(--spacing-xxs)
 }
 
 .home_skills_container p{
   margin-top: 10px;
 }
 
-
+/* .home_skills_container */
 
 
 

@@ -705,9 +705,6 @@ input{
 .MT_footer {
   border-top: 1px solid #2f2f2f;
   padding-block: var(--spacing-xxs);
-
-  /* ===== TODO ===== */
-  margin-top: 300px;
 }
 
 .MT_footer-inner.MT_container {
@@ -795,5 +792,12 @@ input{
   margin-top: 10px;
 }
 
+.MT_copyright-text{
+padding-top: 30px;
+}
+
+.MT_copyright-text p{
+  text-align: center;
+}
 
 

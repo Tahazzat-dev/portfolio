@@ -76,7 +76,7 @@ class TextScramble {
             char = String.fromCharCode(Math.round(intermediateCode));
             this.queue[i].char = char;
           }
-          output += `<span class="MT_txt_anim">${char}</span>`;
+          output += `<span class="T_txt_anim">${char}</span>`;
         }
       } else {
         output += from;
@@ -98,7 +98,7 @@ class TextScramble {
   }
 }
 class ProgressAnimation {
-  constructor(selector = ".MT_progress-animation") {
+  constructor(selector = ".T_progress-animation") {
     this.$elements = $(selector);
     this.observer = new IntersectionObserver(this.handleIntersection, { threshold: 0.5 }); // Adjust threshold as needed
     this.init();
@@ -124,9 +124,9 @@ class ProgressAnimation {
   animateProgress($el) {
     const value = parseInt($el.data("value"), 10);
     const name = $el.data("name");
-    const $fill = $el.find(".MT_progress-fill");
-    const $label = $el.find(".MT_progress-name");
-    const $counter = $el.find(".MT_progress-value");
+    const $fill = $el.find(".T_progress-fill");
+    const $label = $el.find(".T_progress-name");
+    const $counter = $el.find(".T_progress-value");
 
     $label.text(name);
     $fill.css("width", `${value}%`);
@@ -146,8 +146,8 @@ class ProgressAnimation {
 
 // jQuery shorthand on document ready
 $(function () {
-  const $el = $(".MT_skill_anim_container");
-  const phrases = $(".MT_skill_anim_texts").text().split(",");
+  const $el = $(".T_skill_anim_container");
+  const phrases = $(".T_skill_anim_texts").text().split(",");
   const randomizeChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   new TextScramble($el, phrases, randomizeChar, 4000);
 

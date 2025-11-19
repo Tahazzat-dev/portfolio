@@ -25,6 +25,9 @@ svg {
   max-width: 100%;
   height: auto;
 }
+img{
+  object-fit: cover;
+}
 
 input,
 button,
@@ -329,7 +332,7 @@ p{
    Utility Classes
 =========================== */
 /* ======== flex box styles =========== */
-.MT_flex {
+.T_flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -440,68 +443,68 @@ p{
 }
 
 /*======= font sizes ======== */
-.MT_fs-xxs {
+.T_fs-xxs {
   font-size: var(--fs-xxs);
   line-height: var(--lh-normal);
 }
 
-.MT_fs-xs {
+.T_fs-xs {
   font-size: var(--fs-xs);
   line-height: var(--lh-normal);
 }
 
-.MT_fs-sm {
+.T_fs-sm {
   font-size: var(--fs-sm);
   line-height: var(--lh-normal);
 }
 
-.MT_fs-base {
+.T_fs-base {
   font-size: var(--fs-base);
   line-height: var(--lh-normal);
 }
 
-.MT_fs-md {
+.T_fs-md {
   font-size: var(--fs-md);
   line-height: var(--lh-normal);
 }
 
-.MT_fs-lg {
+.T_fs-lg {
   font-size: var(--fs-lg);
   line-height: var(--lh-normal);
 }
 
-.MT_fs-xl {
+.T_fs-xl {
   font-size: var(--fs-xl);
   line-height: var(--lh-normal);
 }
 
-.MT_fs-2xl {
+.T_fs-2xl {
   font-size: var(--fs-2xl);
   line-height: var(--lh-normal);
 }
 
-.MT_fs-3xl {
+.T_fs-3xl {
   font-size: var(--fs-3xl);
   line-height: var(--lh-normal);
 }
 
-.MT_fs-4xl {
+.T_fs-4xl {
   font-size: var(--fs-4xl);
   line-height: var(--lh-normal);
 }
 
-.MT_fs-5xl {
+.T_fs-5xl {
   font-size: var(--fs-5xl);
   line-height: var(--lh-normal);
 }
 
-.MT_fs-6xl {
+.T_fs-6xl {
   font-size: var(--fs-6xl);
   line-height: var(--lh-normal);
 }
 
 /* ======= button style ====== */
-.MT_btn {
+.T_btn {
   transition: all var(--transition-slow);
   background: var(--gradient-bg-black);
   box-shadow: var(--shadow-gray-600);
@@ -509,23 +512,23 @@ p{
   border-radius: var(--radius);
 }
 
-.MT_btn:hover {
+.T_btn:hover {
   background: var(--gradient-bg-black-reverse);
   box-shadow: var(--shadow-gray-reverse-400);
 }
 
-.light .MT_btn {
+.light .T_btn {
   color: var(--clr-body-white);
   background: var(--gradient-bg-white);
   box-shadow: var(--shadow-gray-200);
 }
-.light .MT_btn:hover {
+.light .T_btn:hover {
   background: var(--gradient-bg-white-reverse);
   box-shadow: var(--shadow-gray-reverse-200);
 }
 
 
-.light .MT_btn::after {
+.light .T_btn::after {
   box-shadow: var(--shadow-white-3);
   background: var(--gradient-box-w);
 }
@@ -533,14 +536,14 @@ p{
 
 /* ======= gradient button ====== */
 
-.MT_btn-wrapper {
+.T_btn-wrapper {
   position: relative;
   display: inline-block;
   z-index: 1;
 }
 
 
-.MT_gradient-btn {
+.T_gradient-btn {
   display: block;
   font-size: var(--fs-base);
   line-height: var(--lh-normal);
@@ -552,12 +555,12 @@ p{
   cursor: pointer;
 }
 
-.light .MT_gradient-btn {
+.light .T_gradient-btn {
   color: var(--clr-body-white);
   background: var(--gradient-bg-white);
 }
 
-.MT_gradient-border-bg {
+.T_gradient-border-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -574,7 +577,7 @@ p{
   transition: filter 1s ease-in;
 }
 
-.MT_btn-wrapper:hover .MT_gradient-btn {
+.T_btn-wrapper:hover .T_gradient-btn {
   /* color: var(--clr-primary); */
 }
 
@@ -598,24 +601,24 @@ p{
 
 
 /* ======= card border and shadow ====== */
-.MT_card{
+.T_card{
   transition: all var(--transition-slow);
   background: var(--gradient-bg-black);
   box-shadow: var(--shadow-gray-600);
 }
 
-.MT_card:hover{  
+.T_card:hover{  
   transform: translateY(-5px);
   background: var(--gradient-bg-black-reverse);
   box-shadow: var(--shadow-gray-reverse-600);
 }
 
-.light .MT_card{
+.light .T_card{
   background: var(--gradient-bg-white);
   box-shadow: var(--shadow-gray-200);
 }
 
-.light .MT_card:hover{
+.light .T_card:hover{
   background: var(--gradient-bg-white-reverse);
   box-shadow: var(--shadow-gray-reverse-200);
 }

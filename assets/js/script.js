@@ -153,3 +153,69 @@ $(function () {
 
   new ProgressAnimation();
 });
+
+
+
+// 1. Initialize Lenis
+    const lenis = new Lenis({
+        duration: 1.2, // Time taken for the scroll to complete (in seconds)
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Default easing
+        direction: 'vertical', // vertical or horizontal
+        gestureDirection: 'vertical', // vertical, horizontal, both
+        smoothWheel: true,
+        smoothTouch: false, // Set to true if you want smooth scroll on touch devices
+        lerp: 0.1, // If duration is not set, this controls the smoothing (0.1 is standard)
+    });
+
+    // 2. Add an event listener to log scroll events (optional)
+    // lenis.on('scroll', (e) => {
+    //   console.log(e)
+    // });
+
+    // 3. Define the Animation Frame (RAF) loop
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Stop the browser's default instant jump behavior
+            e.preventDefault(); 
+            
+            // Get the target section ID (e.g., #about or #projects)
+            const targetId = link.getAttribute('href'); 
+            const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            // 1. Get the current and target scroll positions
+            const currentScrollPosition = lenis.scroll; // Lenis stores the current scroll Y position
+            
+            // Calculate the target element's top position relative to the document
+            const targetTop = targetElement.getBoundingClientRect().top + currentScrollPosition; 
+            
+            // 2. Calculate the distance to scroll
+            const distance = Math.abs(targetTop - currentScrollPosition);
+            
+            // 3. Define the scroll factor and minimum/maximum time
+            const SCROLL_FACTOR = 0.0005; // Adjust this value to change speed
+            const MIN_DURATION = 0.5;    // Minimum time (in seconds)
+            const MAX_DURATION = 1.5;    // Maximum time (in seconds)
+
+            // 4. Calculate the duration
+            let calculatedDuration = MIN_DURATION + (distance * SCROLL_FACTOR);
+            
+            // Ensure the duration does not exceed the maximum time
+            calculatedDuration = Math.min(calculatedDuration, MAX_DURATION);
+            
+            // 5. Scroll using the calculated duration
+            lenis.scrollTo(targetId, {
+                duration: calculatedDuration,
+                offset: 0 
+            });
+        }
+        });
+      })
+
+    // 4. Start the loop
+    requestAnimationFrame(raf);

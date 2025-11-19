@@ -649,6 +649,7 @@ border: 1px solid #cdd1d4;
 .light .MT_contact-form button:hover{
   border: 1px solid #b6babd;
 }
+
 /* ================= 
       Device responsiveness
              ================== */
@@ -935,4 +936,16 @@ border: 1px solid #cdd1d4;
     flex-wrap: wrap;
     gap: 25px;
   }
+
+
+  /* ====== contact page ===== */
+  .MT_contact-form{
+    padding: 0px;
+  }
+  
+  .MT_contact-form .double-box{
+    flex-direction: column;
+}
+
+
 }

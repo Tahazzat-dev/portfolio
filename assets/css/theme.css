@@ -624,6 +624,18 @@ p{
   box-shadow: var(--shadow-gray-reverse-200);
 }
 
+
+.T_shadow{
+  box-shadow: var(--shadow-gray-600);
+}
+
+
+.light .T_shadow{
+  box-shadow: var(--shadow-gray-200);
+}
+
+
+
 /* ===========================
    Browser Compatibility
 =========================== */

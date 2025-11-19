@@ -1,3 +1,4 @@
+(function($) {
 class TextScramble {
   constructor($el, phrases = [], initialRandomizeChar, interval = 800) {
     this.$el = $el;
@@ -219,3 +220,7 @@ $(function () {
 
     // 4. Start the loop
     requestAnimationFrame(raf);
+
+    $(".T_testimonial-container")?.slick();
+
+    })(jQuery);

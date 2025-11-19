@@ -74,7 +74,8 @@ p{
   --clr-white-900: #ffffff;
 
   /* ======= text color ======== */
-  --clr-body: #878e99;
+  /* --clr-body: #878e99; */
+  --clr-body: #c0c5ce;
   --clr-body-white: #3c3e41;
 
   /* ======= background-color ======== */

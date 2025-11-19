@@ -420,6 +420,11 @@ input {
   text-align: center;
 }
 
+.T_section-title {
+  margin-bottom: 15px;
+}
+
+
 /* ========= home page banner ========== */
 .T_banner {
   position: relative;
@@ -659,6 +664,9 @@ border: 1px solid #cdd1d4;
 .light .T_contact-form button:hover{
   border: 1px solid #b6babd;
 }
+
+/* ======= testimonials ========= */
+
 
 /* ================= 
       Device responsiveness
